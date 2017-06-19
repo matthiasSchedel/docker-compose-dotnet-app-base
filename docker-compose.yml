@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+  helloapp:
+    build: ./helloapp/
+    ports:
+     - "5000:5000"
+    volumes:
+     - ./helloapp/Program.cs:/helloapp/Program.cs
+     - ./helloapp/Startup.cs:/helloapp/Startup.cs
+
+   # working_dir: /helloapp/
