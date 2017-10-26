@@ -3,7 +3,7 @@ Why:
 1. To show dev-exception page: [Link here](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/error-handling#the-developer-exception-page)
 2. [More:](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments)
 
-Change code in Startup.cs:
+Change code in Startup.cs file:
 ```
 using using Microsoft.AspNetCore.Hosting;
 
@@ -29,12 +29,13 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 Type: `0.0.0.0:5000` in browser -> check console 
 
+Add the following lines in Dockerfile
 ```
 # After MAINTAINER in Dockerfile
 ENV ASPNETCORE_ENVIRONMENT=“Development"
 ```
 
-```$ docker-compose  - -build ```
+```$ docker-compose  --build ```
 
 Type: `0.0.0.0:5000` in browser -> check console  -> dev changed 
 
